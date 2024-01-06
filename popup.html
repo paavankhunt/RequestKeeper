@@ -79,7 +79,7 @@
           <option value="DELETE">DELETE</option>
         </select>
       </div>
-      
+
       <div class="form-group">
         <label for="url">URL:</label>
         <textarea rows="5" id="url" required></textarea>
@@ -95,13 +95,11 @@
         <textarea rows="5" id="body"></textarea>
       </div>
 
-      <button type="submit" class="submit-btn" onclick="submitForm()">
-        Send Request
-      </button>
+      <button type="submit" class="submit-btn">Send Request</button>
     </form>
 
     <pre id="response"></pre>
-
-    <script src="popup.js"></script>
+    <!-- <div id="bodyContent"></div> -->
+    <script src="popup.js" nonce="random_nonce_value"></script>
   </body>
 </html>

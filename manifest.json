@@ -2,10 +2,8 @@
   "manifest_version": 3,
   "name": "RequestKeeper",
   "version": "1.0",
-  "host_permissions": [
-    "http://*/*",
-    "https://*/*"
-  ],
+  "permissions": ["tabs", "activeTab", "scripting"],
+  "host_permissions": ["http://*/*", "https://*/*"],
   "action": {
     "default_popup": "popup.html"
   },
@@ -14,5 +12,12 @@
     "16": "icon.png",
     "48": "icon.png",
     "128": "icon.png"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "nonce": "random_nonce_value"
+    }
+  ]
 }
